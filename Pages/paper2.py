@@ -3,9 +3,9 @@ import mysql.connector
 import os
 from io import BytesIO
 import base64
-import fitz
-from PyPDF2 import PdfReader
-from pdfreader import SimplePDFViewer
+# import fitz
+# from PyPDF2 import PdfReader
+# from pdfreader import SimplePDFViewer
 import binascii
 import webbrowser
 import pandas as pd

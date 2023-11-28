@@ -11,8 +11,8 @@ def create_connection():
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='dhruvindia',
-            database='conference_management1'
+            password='password',
+            database='rpms'
         )
     except Error as e:
         st.error(f"Error: {e}")
@@ -25,7 +25,9 @@ def create_users_table(connection):
         CREATE TABLE IF NOT EXISTS users (
             id INT AUTO_INCREMENT PRIMARY KEY,
             username VARCHAR(255) NOT NULL,
-            password VARCHAR(255) NOT NULL
+            password VARCHAR(255) NOT NULL,
+            email VARCHAR(255),
+            type ENUM("ADMIN", "STUDENT", "REVIEWER", "VIEWER")
         )
     """)
     connection.commit()
